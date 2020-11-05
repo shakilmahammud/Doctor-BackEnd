@@ -14,11 +14,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false}))
 require('dotenv').config()
 
-var serviceAccount = require("./doctors-portal-client-firebase-adminsdk-8s39n-0f2ffa71da.json");
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://doctors-portal-client.firebaseio.com"
-});
+
 
 
 const MongoClient = require('mongodb').MongoClient;
